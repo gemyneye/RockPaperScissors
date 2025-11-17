@@ -23,7 +23,7 @@ rock beats scissors
 paper beats rock */
 
 //Output result
-
+function playGame () {
 const options = ["rock", "paper", "scissors"];
 let round = 0;
 let humanScore = 0;
@@ -67,4 +67,5 @@ if (humanScore > computerScore) {
 }
  
 console.log(`Five rounds complete! \n Final Score: \n You: ${humanScore}, \n Computer: ${computerScore}. And the winner is ... ${winner}`);
-
+}
+playGame();
