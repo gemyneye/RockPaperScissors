@@ -47,8 +47,6 @@ Understanding when certain tools (like ternary operators, that I used when first
 
 ## Next Steps / Possible Enhancements
 
-(Not required, but adding this makes your repo look thoughtful and future-oriented.)
-
 Add a simple browser UI with buttons
 
 Display results inside the webpage instead of the console
