@@ -23,6 +23,7 @@ rock beats scissors
 paper beats rock */
 
 //Output result
+
 function playGame () {
 const options = ["rock", "paper", "scissors"];
 let round = 0;
@@ -57,11 +58,13 @@ function playRound(player, machine) {
 for (let i = 0; i < 5; i++) {
     console.log(playRound(getHumanChoice(), getComputerChoice()));
 }
+
 let winner = '';
+
 if (humanScore > computerScore) {
-    winner = "you";
+    winner = "you!";
 } else if (computerScore > humanScore) {
-    winner ='The Computer!';
+    winner ='the computer!';
 } else {
     winner = 'It\'s a tie! Want a rematch?';
 }
