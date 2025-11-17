@@ -51,11 +51,14 @@ function playRound(player, machine) {
     }
     else {
         computerScore += 1;
-        return `You lost. Your score: ${humanScore} \n Computer score ${computerScore}`;
+        return `You lost. You: ${player} \n Computer: ${machine} \nYour score: ${humanScore} \n Computer score ${computerScore}`;
     }
 }
+for (let i = 0; i < 5; i++) {
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+}
 
-console.log(getComputerChoice());
-// console.log(getHumanChoice());
-console.log(playRound(getHumanChoice(), getComputerChoice()));
+const winner = humanScore > computerScore ? 'You!': 'The Computer!';
+ 
+console.log(`Five rounds complete! \n Final Score: \n You: ${humanScore}, \n Computer: ${computerScore}. And the winner is ... ${winner}`);
 
