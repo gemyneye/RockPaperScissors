@@ -30,7 +30,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getHumanChoice(){
-        return prompt("Please choose 'rock', 'paper', or 'scissors'");
+        return prompt("Please choose 'rock', 'paper', or 'scissors'").toLowerCase();
 }
 
 function getComputerChoice() {
@@ -57,8 +57,14 @@ function playRound(player, machine) {
 for (let i = 0; i < 5; i++) {
     console.log(playRound(getHumanChoice(), getComputerChoice()));
 }
-
-const winner = humanScore > computerScore ? 'You!': 'The Computer!';
+let winner = '';
+if (humanScore > computerScore) {
+    winner = "you";
+} else if (computerScore > humanScore) {
+    winner ='The Computer!';
+} else {
+    winner = 'It\'s a tie! Want a rematch?';
+}
  
 console.log(`Five rounds complete! \n Final Score: \n You: ${humanScore}, \n Computer: ${computerScore}. And the winner is ... ${winner}`);
 
