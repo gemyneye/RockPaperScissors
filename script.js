@@ -29,6 +29,10 @@ const options = ["rock", "paper", "scissors"];
 let round = 0;
 let humanScore = 0;
 let computerScore = 0;
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
+rock
 
 function getHumanChoice(){
         return prompt("Please choose 'rock', 'paper', or 'scissors'").toLowerCase();
@@ -55,14 +59,14 @@ function playRound(player, machine) {
         return `You lost. You: ${player} \n Computer: ${machine} \nYour score: ${humanScore} \n Computer score ${computerScore}`;
     }
 }
-for (let i = 0; i < 5; i++) {
-    console.log(playRound(getHumanChoice(), getComputerChoice()));
-}
+// for (let i = 0; i < 5; i++) {
+//     console.log(playRound(getHumanChoice(), getComputerChoice()));
+// }
 
 let winner = '';
 
 if (humanScore > computerScore) {
-    winner = "you!";
+    winner = 'you!';
 } else if (computerScore > humanScore) {
     winner ='the computer!';
 } else {
