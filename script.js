@@ -32,7 +32,23 @@ let computerScore = 0;
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
-rock
+const choices = document.querySelector("#choices");
+
+choices.addEventListener('click', (event) => {
+    let target = event.target;
+
+    switch(target.id) {
+        case 'rock':
+            console.log('Rock');
+            break;
+        case 'paper':
+            console.log('Paper');
+            break;
+        case 'scissors':
+            console.log('Scissors');
+            break;
+    }
+})
 
 function getHumanChoice(){
         return prompt("Please choose 'rock', 'paper', or 'scissors'").toLowerCase();
