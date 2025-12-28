@@ -36,20 +36,24 @@ function playGame () {
     const paperButton = document.querySelector("#paper");
     const scissorsButton = document.querySelector("#scissors");
     const choices = document.querySelector("#choices");
-    
+    const gameStatus = document.createElement("div");
+    let winner = "";
 
     choices.addEventListener('click', (event) => {
         if(!event.target.matches("button")) return;
         const humanChoice = event.target.id;
-        const gameStatus = document.createElement("p");
+        
         const gameResult = playRound(humanChoice, getComputerChoice());
+        const gameWinner = document.createElement("div");
         console.log(`Human chose ${humanChoice}`);
         gameStatus.textContent = gameResult;
         choices.appendChild(gameStatus);
+        
     })
 
     function playRound(player, machine) {
         
+            
         if (player === machine) {
             return `It's a tie! Try again. \n Your score: ${humanScore} \n Computer score: ${computerScore}`;
         } else if ((player == "scissors" && machine == "paper")
@@ -57,27 +61,22 @@ function playGame () {
             || (player == "paper" && machine == "rock")
         ) {
             humanScore += 1;
-            return `You win! You: ${player} \n Computer: ${machine} \n Your score: ${humanScore} \n Computer score: ${computerScore}`;
+            return `You win! \n You: ${player} \n Computer: ${machine} \n Your score: ${humanScore} \n Computer score: ${computerScore}`;
         }
         else {
             computerScore += 1;
-            return `You lost. You: ${player} \n Computer: ${machine} \nYour score: ${humanScore} \n Computer score ${computerScore}`;
+            return `You lost. \n You: ${player} \n Computer: ${machine} \nYour score: ${humanScore} \n Computer score ${computerScore}`;
         }
+        
+    
     }
 
-
-
-
-    let winner = '';
-
-    if (humanScore > computerScore) {
-        winner = 'you!';
-    } else if (computerScore > humanScore) {
-        winner ='the computer!';
-    } else {
-        winner = 'It\'s a tie! Want a rematch?';
-    }
- 
-console.log(`Five rounds complete! \n Final Score: \n You: ${humanScore}, \n Computer: ${computerScore}. And the winner is ... ${winner}`);
 }
 playGame();
+
+
+if (humanScore === 5) {
+        winner = `You won! ${humanScore} to ${computerScore}`;
+        } if (computerScore === 5) {
+            winner = `Sorry, you lost. ${humanScore} to ${computerScore}`;
+        }
