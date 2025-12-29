@@ -45,13 +45,13 @@ The importance of using documentation (especially MDN Web Docs) as a reference i
 
 Understanding when certain tools (like ternary operators, that I used when first deciding the winner) are appropriate — and when a full conditional is clearer.
 
-## Next Steps / Possible Enhancements
+## Conclusion
 
-Add a simple browser UI with buttons
+I added a simple browser UI with buttons
 
-Display results inside the webpage instead of the console
+I display results inside the webpage instead of the console
 
-Allow the user to play until they choose to quit
+I made the game 5 rounds with an option to play again.
 
-Add animations or icons for the choices
+Added icons for the choices
 
