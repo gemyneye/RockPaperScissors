@@ -72,6 +72,7 @@ function playGame () {
     
     choices.addEventListener('click', (event) => {
         if(!event.target.matches("button")) return;
+        if(!resetBtn.hidden) return;
         const humanChoice = event.target.id;
        
         const gameResult = playRound(humanChoice, getComputerChoice());
